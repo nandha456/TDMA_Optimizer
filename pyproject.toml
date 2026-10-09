@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tdma-optimizer"
+version = "1.0.0"
+description = "Distance-2 graph-coloring TDMA schedule planner for multi-hop wireless networks"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "networkx>=3.2,<4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<10",
+]
+
+[project.scripts]
+tdma-optimizer = "tdma_optimizer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
