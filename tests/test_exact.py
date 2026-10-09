@@ -52,7 +52,18 @@ class Certify(unittest.TestCase):
         self.assertEqual(result.num_slots, 9)
         self.assertTrue(is_proper(h, result.assignment))
 
-    def test_search_finds_optimum_on_odd_cycle_power(self):
+    def test_search_opens_slots_beyond_the_clique(self):
+        # Optimum (4) exceeds the clique bound (3): the search must add a new slot,
+        # not just recolor within the witness clique's 3 slots.
+        coords = parse_coordinates((EXAMPLES / "ring_7.json").read_text())
+        _, h = graphs_for(coords)
+        result = certify(h, {node: i for i, node in enumerate(h.nodes)})  # 7 slots
+        self.assertEqual(result.num_slots, 4)
+        self.assertTrue(result.improved)
+        self.assertIs(result.optimality, Optimality.PROVEN_BY_SEARCH)
+        self.assertTrue(is_proper(h, result.assignment))
+
+    def test_search_reaches_bound_on_even_cycle(self):
         h = nx.cycle_graph(8)  # treat directly as a conflict graph: C8, chi = 2
         h = nx.relabel_nodes(h, {i: f"n{i}" for i in range(8)})
         result = certify(h, {n: i for i, n in enumerate(h.nodes)})

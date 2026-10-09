@@ -45,6 +45,14 @@ class OptimizeSchedule(unittest.TestCase):
             self.assertEqual(result.attempts[0].method, BASELINE_STRATEGY)
             self.assertLessEqual(result.num_slots, min(a.best for a in result.attempts))
 
+    def test_selection_alone_picks_minimum_attempt(self):
+        # With refinement off, the result must equal the best raw attempt. Guards the
+        # selection rule itself, which later stages could otherwise mask.
+        for seed in range(15):
+            _, h = graphs_for(random_coords(seed, n=40, side=2500))
+            result = optimize_schedule(h, seed=seed, restarts=30, refine_passes=0)
+            self.assertEqual(result.num_slots, min(a.best for a in result.attempts))
+
     def test_all_deterministic_strategies_attempted(self):
         _, h = graphs_for(line(5))
         methods = [a.method for a in optimize_schedule(h, restarts=3).attempts]
