@@ -1,0 +1,93 @@
+========================================================================
+                   TDMA TOPOLOGY OPTIMIZATION REPORT                    
+========================================================================
+Total Nodes Processed                 : 16
+Configured Radio Range                : 500.0 meters
+Optimized Frame Length                : 9 unique timeslots (lower is better)
+Lower Bound (largest conflict clique) : 9
+Optimality                            : proven optimal: equals clique lower bound
+------------------------------------------------------------------------
+TOPOLOGY (communication graph G)
+  Radio links (<= range)              : 42
+  Connected components                : 1
+  Max degree                          : 8 (Node_06)
+  Isolated radios                     : none
+
+CONFLICTS (conflict graph H = G^2)
+  Conflicting pairs                   : 90
+    1-hop  direct link                : 42
+    2-hop  hidden terminal            : 48
+  Largest clique (all need own slot)  : Node_01, Node_02, Node_03, Node_05, Node_06, Node_07, Node_09, Node_10, Node_11
+
+OPTIMIZATION (slots per heuristic)
+  Heuristic                                    Runs  Best  Worst   Mean
+  saturation_largest_first [DSATUR baseline]      1     9      9   9.00
+  largest_first                                   1     9      9   9.00
+  smallest_last                                   1     9      9   9.00
+  independent_set                                 1     9      9   9.00
+  connected_sequential_bfs                        1     9      9   9.00
+  connected_sequential_dfs                        1     9      9   9.00
+  random_order (seed=42)                        100     9     10   9.37
+  iterated_greedy refinement                     50     9      9   9.00
+  Selected method                     : saturation_largest_first
+  Exact branch-and-bound              : not needed (lower bound already met)
+
+FRAME
+  Slot duration                       : 1 ms
+  Frame duration                      : 9 ms (9 slots)
+  Spatial reuse factor (nodes/slots)  : 1.78
+  Slots shared by 2+ radios           : 5 of 9
+------------------------------------------------------------------------
+NODE -> SLOT ASSIGNMENTS:
+  Node_01 : Slot 0
+  Node_02 : Slot 1
+  Node_03 : Slot 2
+  Node_04 : Slot 0
+  Node_05 : Slot 3
+  Node_06 : Slot 4
+  Node_07 : Slot 5
+  Node_08 : Slot 3
+  Node_09 : Slot 6
+  Node_10 : Slot 7
+  Node_11 : Slot 8
+  Node_12 : Slot 6
+  Node_13 : Slot 0
+  Node_14 : Slot 1
+  Node_15 : Slot 2
+  Node_16 : Slot 0
+
+STRUCTURAL TDMA SCHEDULE MATRIX (Slot x Node Boolean Matrix):
+(column headers omit the common prefix 'Node_')
+Slot \ Node | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16
+-------------------------------------------------------------------------------------------
+Slot 00     | 1  | 0  | 0  | 1  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 1  | 0  | 0  | 1 
+Slot 01     | 0  | 1  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 1  | 0  | 0 
+Slot 02     | 0  | 0  | 1  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 1  | 0 
+Slot 03     | 0  | 0  | 0  | 0  | 1  | 0  | 0  | 1  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0 
+Slot 04     | 0  | 0  | 0  | 0  | 0  | 1  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0 
+Slot 05     | 0  | 0  | 0  | 0  | 0  | 0  | 1  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0 
+Slot 06     | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 1  | 0  | 0  | 1  | 0  | 0  | 0  | 0 
+Slot 07     | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 1  | 0  | 0  | 0  | 0  | 0  | 0 
+Slot 08     | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 1  | 0  | 0  | 0  | 0  | 0 
+-------------------------------------------------------------------------------------------
+Execution finalized cleanly. Schedule verified conflict-free (90 one/two-hop pairs checked independently).
+========================================================================
+
+EMANE TDMA schedule written to /tmp/claude-0/-home-claude/3a06eb1a-27f6-5518-b6b6-b34ec7cc691c/scratchpad/grid_schedule.xml
+NODE -> NEM MAPPING:
+  Node_01 -> NEM 1
+  Node_02 -> NEM 2
+  Node_03 -> NEM 3
+  Node_04 -> NEM 4
+  Node_05 -> NEM 5
+  Node_06 -> NEM 6
+  Node_07 -> NEM 7
+  Node_08 -> NEM 8
+  Node_09 -> NEM 9
+  Node_10 -> NEM 10
+  Node_11 -> NEM 11
+  Node_12 -> NEM 12
+  Node_13 -> NEM 13
+  Node_14 -> NEM 14
+  Node_15 -> NEM 15
+  Node_16 -> NEM 16

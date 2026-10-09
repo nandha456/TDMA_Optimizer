@@ -1,0 +1,60 @@
+========================================================================
+                   TDMA TOPOLOGY OPTIMIZATION REPORT                    
+========================================================================
+Total Nodes Processed                 : 7
+Configured Radio Range                : 500.0 meters
+Optimized Frame Length                : 4 unique timeslots (lower is better)
+Lower Bound (largest conflict clique) : 3
+Optimality                            : proven optimal: exhaustive branch-and-bound
+------------------------------------------------------------------------
+TOPOLOGY (communication graph G)
+  Radio links (<= range)              : 7
+  Connected components                : 1
+  Max degree                          : 2 (Node_01)
+  Isolated radios                     : none
+
+CONFLICTS (conflict graph H = G^2)
+  Conflicting pairs                   : 14
+    1-hop  direct link                : 7
+    2-hop  hidden terminal            : 7
+  Largest clique (all need own slot)  : Node_01, Node_02, Node_03
+
+OPTIMIZATION (slots per heuristic)
+  Heuristic                                    Runs  Best  Worst   Mean
+  saturation_largest_first [DSATUR baseline]      1     4      4   4.00
+  largest_first                                   1     4      4   4.00
+  smallest_last                                   1     4      4   4.00
+  independent_set                                 1     4      4   4.00
+  connected_sequential_bfs                        1     4      4   4.00
+  connected_sequential_dfs                        1     4      4   4.00
+  random_order (seed=42)                        100     4      4   4.00
+  iterated_greedy refinement                     50     4      4   4.00
+  Selected method                     : saturation_largest_first
+  Exact branch-and-bound              : 4 search nodes
+
+FRAME
+  Slot duration                       : 1 ms
+  Frame duration                      : 4 ms (4 slots)
+  Spatial reuse factor (nodes/slots)  : 1.75
+  Slots shared by 2+ radios           : 3 of 4
+------------------------------------------------------------------------
+NODE -> SLOT ASSIGNMENTS:
+  Node_01 : Slot 0
+  Node_02 : Slot 1
+  Node_03 : Slot 2
+  Node_04 : Slot 0
+  Node_05 : Slot 1
+  Node_06 : Slot 2
+  Node_07 : Slot 3
+
+STRUCTURAL TDMA SCHEDULE MATRIX (Slot x Node Boolean Matrix):
+(column headers omit the common prefix 'Node_')
+Slot \ Node | 01 | 02 | 03 | 04 | 05 | 06 | 07
+----------------------------------------------
+Slot 00     | 1  | 0  | 0  | 1  | 0  | 0  | 0 
+Slot 01     | 0  | 1  | 0  | 0  | 1  | 0  | 0 
+Slot 02     | 0  | 0  | 1  | 0  | 0  | 1  | 0 
+Slot 03     | 0  | 0  | 0  | 0  | 0  | 0  | 1 
+----------------------------------------------
+Execution finalized cleanly. Schedule verified conflict-free (14 one/two-hop pairs checked independently).
+========================================================================
