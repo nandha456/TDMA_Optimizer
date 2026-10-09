@@ -60,15 +60,15 @@ def build_parser() -> argparse.ArgumentParser:
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--input", metavar="FILE", help="JSON file of {node_id: [x, y]}")
     source.add_argument("--coordinates", metavar="JSON", help="inline JSON string of {node_id: [x, y]}")
-    parser.add_argument("--range", type=float, default=DEFAULT_RANGE_M, dest="radio_range",
+    parser.add_argument("--range", type=float, default=DEFAULT_RANGE_M, dest="radio_range", metavar="METERS",
                         help=f"radio range in meters, inclusive (default {DEFAULT_RANGE_M})")
-    parser.add_argument("--expected-nodes", type=_positive_int, default=16,
+    parser.add_argument("--expected-nodes", type=_positive_int, default=16, metavar="N",
                         help="required number of nodes (default 16)")
-    parser.add_argument("--seed", type=int, default=DEFAULT_SEED,
+    parser.add_argument("--seed", type=int, default=DEFAULT_SEED, metavar="INT",
                         help=f"seed for randomized attempts (default {DEFAULT_SEED})")
-    parser.add_argument("--restarts", type=_non_negative_int, default=DEFAULT_RESTARTS,
+    parser.add_argument("--restarts", type=_non_negative_int, default=DEFAULT_RESTARTS, metavar="N",
                         help=f"number of random-order greedy attempts (default {DEFAULT_RESTARTS})")
-    parser.add_argument("--exact-budget", type=_non_negative_int, default=DEFAULT_NODE_BUDGET,
+    parser.add_argument("--exact-budget", type=_non_negative_int, default=DEFAULT_NODE_BUDGET, metavar="N",
                         help="branch-and-bound node budget for proving optimality; 0 disables "
                              f"(default {DEFAULT_NODE_BUDGET})")
     parser.add_argument("--emane-xml", metavar="FILE",

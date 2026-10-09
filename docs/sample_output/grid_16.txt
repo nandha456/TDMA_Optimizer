@@ -72,22 +72,3 @@ Slot 08     | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 0  | 1  | 0  | 0  | 0
 -------------------------------------------------------------------------------------------
 Execution finalized cleanly. Schedule verified conflict-free (90 one/two-hop pairs checked independently).
 ========================================================================
-
-EMANE TDMA schedule written to /tmp/claude-0/-home-claude/3a06eb1a-27f6-5518-b6b6-b34ec7cc691c/scratchpad/grid_schedule.xml
-NODE -> NEM MAPPING:
-  Node_01 -> NEM 1
-  Node_02 -> NEM 2
-  Node_03 -> NEM 3
-  Node_04 -> NEM 4
-  Node_05 -> NEM 5
-  Node_06 -> NEM 6
-  Node_07 -> NEM 7
-  Node_08 -> NEM 8
-  Node_09 -> NEM 9
-  Node_10 -> NEM 10
-  Node_11 -> NEM 11
-  Node_12 -> NEM 12
-  Node_13 -> NEM 13
-  Node_14 -> NEM 14
-  Node_15 -> NEM 15
-  Node_16 -> NEM 16
