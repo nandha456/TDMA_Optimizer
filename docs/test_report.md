@@ -8,19 +8,19 @@
 | Python | 3.13.16 |
 | NetworkX | 3.6.1 |
 | Runner | `python -m unittest discover -s tests -t .` |
-| Date | 2026-10-09 |
+| Date | 2026-10-09 (Part 1), 2026-10-14 (Part 2) |
 
-**About pytest.** The suite is written as `unittest.TestCase` classes, which pytest collects without changes. The build environment had no access to PyPI, so pytest could not be installed and the suite was executed with the standard-library runner. `python -m pytest` has **not** been run in this environment. On a machine with internet access, run `pip install -e ".[dev]" && python -m pytest`, which should collect the same 94 tests.
+**About pytest.** The suite is written as `unittest.TestCase` classes, which pytest collects without changes. The build environment had no access to PyPI, so pytest could not be installed and the suite was executed with the standard-library runner. `python -m pytest` has **not** been run in this environment. On a machine with internet access, run `pip install -e ".[dev]" && python -m pytest`, which should collect the same 102 tests.
 
 ## Result
 
 ```
-Ran 94 tests in 1.350s
+Ran 102 tests in 1.218s
 
 OK
 ```
 
-All 94 tests passed. No test was skipped, weakened or marked as an expected failure.
+All 102 tests passed. No test was skipped, weakened or marked as an expected failure.
 
 | File | Tests | Covers |
 |---|---|---|
@@ -32,6 +32,7 @@ All 94 tests passed. No test was skipped, weakened or marked as an expected fail
 | `test_validator.py` | 7 | valid accepted, 1-hop and 2-hop rejection with the named pair, missing and unknown nodes, bad slot types, 3-hop ignored, **the PDF's sample output is rejected on the PDF grid** |
 | `test_report.py` | 7 | one `1` per node column, matrix ⇔ mapping, rows ordered, each node once in the header, *printed* text parsed back and cross-checked, report fields, label prefix safety |
 | `test_emane_export.py` | 5 | XML structure, each NEM in exactly its slot, NEM numbering, custom parameters, input checks |
+| `test_emane_scenario.py` | 8 | valid schedule predicts every link delivered, hidden terminal predicts a collision at the middle node, same-slot neighbours predict "receiver transmitting", prediction agrees with the validator, the G-only control is proper on G but not on G² (64 predicted losses on the grid), complete scenario files (16 platforms, ports, slot duration), CLI writes both scenarios, bad input exits 2 |
 | `test_cli.py` | 13 | 16-node file run, inline JSON (4 nodes), wrong count → exit 2, invalid JSON → exit 2 with clean stdout, mutually exclusive inputs, input required, bad range, no-edge topology, same seed gives identical output, EMANE XML export, `python -m tdma_optimizer` subprocess, 40 random 16-node end-to-end runs, **validation gate catches an injected optimizer bug** |
 
 ### Mandatory checklist (specification §8)
@@ -58,6 +59,20 @@ All 94 tests passed. No test was skipped, weakened or marked as an expected fail
 | 18 | No communication edges | `test_no_edges_when_all_far_apart`, `test_no_edges_needs_one_slot`, `test_no_edges_topology` |
 
 Tests assert *properties* (validity, slot count against a proven bound, matrix-mapping agreement) rather than one exact coloring, except where the optimum is unique up to relabeling.
+
+## Part 2: EMANE experiment (measured)
+
+`emane/run_demo.sh` ran on the same VM (2 vCPU) with EMANE 1.5.2 in Docker, real-time scheduling on, 20 s of traffic per run.
+
+| Check | Result |
+| --- | --- |
+| Link-level predictions matched (2 ms and 4 ms slots, both schedules, both topologies) | **396/396** |
+| Collision drops, optimized schedule (all 5 runs incl. 1 ms) | **0** |
+| Collision drops, G-only control, grid at 4 ms | 12,629 frames |
+| Frames received between out-of-range radios (all 10 runs) | 0 |
+| Optimized grid delivery at 1 / 2 / 4 ms slots | 79.7% / 98.7% / 99.7% (losses are late frames, not collisions) |
+
+Full tables: `docs/emane_integration.md` §6.
 
 ## Mutation check: do the tests catch real bugs?
 
@@ -106,5 +121,5 @@ Unedited outputs are in `docs/sample_output/`. The heuristic comparison across 2
 
 - The suite was run with `unittest`, not pytest (see above).
 - Random-topology tests use the uniform-square model only. Clustered or line-like deployments are covered by the hand-built examples.
-- No EMANE run was performed. The EMANE exporter is tested for format and consistency only.
+- EMANE runs are an experiment, not part of the unit suite: they need Docker and privileged containers. Their results are in `docs/emane_integration.md` §6 and `emane/results/`.
 - Package installation was tested as an editable install with `--no-build-isolation`, because the environment was offline. A normal `pip install -e .` downloads setuptools for the isolated build.

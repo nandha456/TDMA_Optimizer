@@ -53,6 +53,7 @@
 | `pipeline.py` | Orchestration and the validation gate | all of the above |
 | `report.py` | ASCII report, mapping, Slot × Node matrix | pipeline |
 | `emane_export.py` | Schedule → EMANE TDMA XML, NEM numbering | errors |
+| `emane_scenario.py` | Full EMANE scenario (platform, NEM, MAC XML) + per-link delivery prediction; `tdma-emane-scenario` command | pipeline, emane_export |
 | `cli.py` | argparse, exit codes, file output | pipeline, report, emane_export |
 
 The dependency graph has no cycles. `cli.py` is the only module that touches `sys.argv`, stdout, stderr or exit codes.
