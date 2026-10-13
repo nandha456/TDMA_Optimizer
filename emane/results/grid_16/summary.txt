@@ -1,0 +1,82 @@
+==============================================================================
+Scenario            : optimized  (9 slots x 1 ms)
+Directed links      : 84  (predicted delivered 84, predicted lost 0)
+Mean delivery       : predicted-delivered links 79.7%, predicted-lost links 0.0%
+Prediction matches  : 34/84 links
+Partial links       : 50
+Frames on non-links : 0
+EMANE MAC drops     : collision 0 frames (overlap lock 0 + low SINR 0), late (emulator timing) 3408
+  link                 predicted  measured   ratio  reason
+  Node_01->Node_02    ok         PARTIAL     17.0%  ok
+  Node_01->Node_05    ok         PARTIAL     14.5%  ok
+  Node_01->Node_06    ok         PARTIAL     21.0%  ok
+  Node_02->Node_01    ok         PARTIAL     71.0%  ok
+  Node_02->Node_03    ok         PARTIAL     70.5%  ok
+  Node_02->Node_05    ok         PARTIAL     69.5%  ok
+  Node_02->Node_06    ok         PARTIAL     71.5%  ok
+  Node_02->Node_07    ok         PARTIAL     73.0%  ok
+  Node_03->Node_02    ok         PARTIAL     88.0%  ok
+  Node_03->Node_04    ok         PARTIAL     89.5%  ok
+  Node_03->Node_06    ok         PARTIAL     87.0%  ok
+  Node_03->Node_07    ok         PARTIAL     87.5%  ok
+  Node_03->Node_08    ok         PARTIAL     88.0%  ok
+  Node_04->Node_03    ok         PARTIAL     20.0%  ok
+  Node_04->Node_07    ok         PARTIAL     21.0%  ok
+==============================================================================
+Scenario            : control-g-only  (4 slots x 1 ms)
+Directed links      : 84  (predicted delivered 20, predicted lost 64)
+Mean delivery       : predicted-delivered links 31.5%, predicted-lost links 16.6%
+Prediction matches  : 28/84 links
+Partial links       : 56
+Frames on non-links : 0
+EMANE MAC drops     : collision 2059 frames (overlap lock 923 + low SINR 1136), late (emulator timing) 11363
+  link                 predicted  measured   ratio  reason
+  Node_02->Node_01    ok         PARTIAL     25.0%  ok
+  Node_02->Node_05    lost       PARTIAL     23.5%  collision with Node_10
+  Node_02->Node_06    lost       PARTIAL     22.5%  collision with Node_10
+  Node_03->Node_04    ok         PARTIAL     14.0%  ok
+  Node_03->Node_08    lost       PARTIAL     11.0%  collision with Node_11
+  Node_04->Node_08    lost       PARTIAL     22.5%  collision with Node_12
+  Node_05->Node_01    ok         PARTIAL     32.0%  ok
+  Node_05->Node_09    lost       PARTIAL     29.5%  collision with Node_13
+  Node_06->Node_01    ok         PARTIAL     35.0%  ok
+  Node_06->Node_02    ok         PARTIAL     39.5%  ok
+  Node_06->Node_05    ok         PARTIAL     35.5%  ok
+  Node_06->Node_09    lost       PARTIAL     31.0%  collision with Node_14
+  Node_06->Node_10    lost       PARTIAL     31.5%  collision with Node_14
+  Node_07->Node_03    ok         PARTIAL     34.0%  ok
+  Node_07->Node_04    ok         PARTIAL     30.0%  ok
+==============================================================================
+Scenario            : optimized  (9 slots x 2 ms)
+Directed links      : 84  (predicted delivered 84, predicted lost 0)
+Mean delivery       : predicted-delivered links 98.7%, predicted-lost links 0.0%
+Prediction matches  : 84/84 links
+Partial links       : 0
+Frames on non-links : 0
+EMANE MAC drops     : collision 0 frames (overlap lock 0 + low SINR 0), late (emulator timing) 221
+==============================================================================
+Scenario            : control-g-only  (4 slots x 2 ms)
+Directed links      : 84  (predicted delivered 20, predicted lost 64)
+Mean delivery       : predicted-delivered links 96.5%, predicted-lost links 2.9%
+Prediction matches  : 84/84 links
+Partial links       : 0
+Frames on non-links : 0
+EMANE MAC drops     : collision 11994 frames (overlap lock 6691 + low SINR 5303), late (emulator timing) 578
+==============================================================================
+Scenario            : optimized  (9 slots x 4 ms)
+Directed links      : 84  (predicted delivered 84, predicted lost 0)
+Mean delivery       : predicted-delivered links 99.7%, predicted-lost links 0.0%
+Prediction matches  : 84/84 links
+Partial links       : 0
+Frames on non-links : 0
+EMANE MAC drops     : collision 0 frames (overlap lock 0 + low SINR 0), late (emulator timing) 45
+==============================================================================
+Scenario            : control-g-only  (4 slots x 4 ms)
+Directed links      : 84  (predicted delivered 20, predicted lost 64)
+Mean delivery       : predicted-delivered links 99.8%, predicted-lost links 1.1%
+Prediction matches  : 84/84 links
+Partial links       : 0
+Frames on non-links : 0
+EMANE MAC drops     : collision 12629 frames (overlap lock 7093 + low SINR 5536), late (emulator timing) 35
+==============================================================================
+markdown summary written to /home/claude/tdma-optimizer/emane/results/grid_16/summary.md

@@ -5,3 +5,5 @@ build/
 dist/
 *.xml
 !examples/*.xml
+!emane/results/**/*.xml
+emane/results/**/emane-*.log

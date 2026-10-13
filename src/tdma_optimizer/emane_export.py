@@ -6,7 +6,7 @@ demo 8 ``schedule.xml``::
 
     <emane-tdma-schedule>
       <structure frames="1" slots="K" slotoverhead="0" slotduration="1000" bandwidth="1M"/>
-      <multiframe frequency="2.4G" power="0" class="0" datarate="100M">
+      <multiframe frequency="2.4G" power="0" class="0" datarate="11M">
         <frame index="0">
           <slot index="0" nodes="1,3"><tx/></slot>
           ...
@@ -18,8 +18,8 @@ radio transmits once per frame and listens in the other K-1 slots.
 
 The file is delivered with ``emaneevent-tdmaschedule schedule.xml -i <iface>``.
 This module only generates the XML; it does not need EMANE installed.
-Generated output has been checked against the documented format, not yet
-against a running EMANE instance (see docs/emane_integration.md).
+Verified against EMANE 1.5.2: the schedule is accepted and enforced
+(see docs/emane_integration.md and emane/results/).
 """
 
 from __future__ import annotations
@@ -37,7 +37,7 @@ class EmaneRadioParams:
     slot_overhead_us: int = 0
     bandwidth: str = "1M"
     frequency: str = "2.4G"
-    datarate: str = "100M"
+    datarate: str = "11M"  # an entry of EMANE's stock TDMA PCR curve (1M..54M)
     power_dbm: float = 0
     traffic_class: int = 0
 

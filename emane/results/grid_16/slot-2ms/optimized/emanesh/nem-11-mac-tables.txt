@@ -1,0 +1,161 @@
+nem 11  mac BroadcastByteAcceptTable0
+| NEM | Num Bytes Tx | Num Bytes Rx |
+| 6   | 0            | 17512        |
+| 7   | 0            | 17336        |
+| 8   | 0            | 17248        |
+| 10  | 0            | 17424        |
+| 11  | 17600        | 0            |
+| 12  | 0            | 17336        |
+| 14  | 0            | 17160        |
+| 15  | 0            | 17336        |
+| 16  | 0            | 17160        |
+
+nem 11  mac BroadcastByteAcceptTable1
+| NEM | Num Bytes Tx | Num Bytes Rx |
+
+nem 11  mac BroadcastByteAcceptTable2
+| NEM | Num Bytes Tx | Num Bytes Rx |
+
+nem 11  mac BroadcastByteAcceptTable3
+| NEM | Num Bytes Tx | Num Bytes Rx |
+
+nem 11  mac BroadcastByteAcceptTable4
+| NEM | Num Bytes Tx | Num Bytes Rx |
+
+nem 11  mac BroadcastByteDropTable0
+| NEM | SINR | Reg Id | Dst MAC | Queue Overflow | Bad Control | Bad Spectrum Query | Flow Control | Big | Long | Freq | Slot Error | Miss Fragment |
+| 6   | 0    | 0      | 0       | 0              | 0           | 0                  | 0            | 0   | 0    | 0    | 88         | 0             |
+| 7   | 0    | 0      | 0       | 0              | 0           | 0                  | 0            | 0   | 0    | 0    | 264        | 0             |
+| 8   | 0    | 0      | 0       | 0              | 0           | 0                  | 0            | 0   | 0    | 0    | 352        | 0             |
+| 10  | 0    | 0      | 0       | 0              | 0           | 0                  | 0            | 0   | 0    | 0    | 176        | 0             |
+| 12  | 0    | 0      | 0       | 0              | 0           | 0                  | 0            | 0   | 0    | 0    | 264        | 0             |
+| 14  | 0    | 0      | 0       | 0              | 0           | 0                  | 0            | 0   | 0    | 0    | 440        | 0             |
+| 15  | 0    | 0      | 0       | 0              | 0           | 0                  | 0            | 0   | 0    | 0    | 264        | 0             |
+| 16  | 0    | 0      | 0       | 0              | 0           | 0                  | 0            | 0   | 0    | 0    | 440        | 0             |
+
+nem 11  mac BroadcastByteDropTable1
+| NEM | SINR | Reg Id | Dst MAC | Queue Overflow | Bad Control | Bad Spectrum Query | Flow Control | Big | Long | Freq | Slot Error | Miss Fragment |
+
+nem 11  mac BroadcastByteDropTable2
+| NEM | SINR | Reg Id | Dst MAC | Queue Overflow | Bad Control | Bad Spectrum Query | Flow Control | Big | Long | Freq | Slot Error | Miss Fragment |
+
+nem 11  mac BroadcastByteDropTable3
+| NEM | SINR | Reg Id | Dst MAC | Queue Overflow | Bad Control | Bad Spectrum Query | Flow Control | Big | Long | Freq | Slot Error | Miss Fragment |
+
+nem 11  mac BroadcastByteDropTable4
+| NEM | SINR | Reg Id | Dst MAC | Queue Overflow | Bad Control | Bad Spectrum Query | Flow Control | Big | Long | Freq | Slot Error | Miss Fragment |
+
+nem 11  mac EventReceptionTable
+| Event | Total Rx |
+| 105   | 1        |
+
+nem 11  mac NeighborMetricTable
+| NEM   | Rx Pkts | Tx Pkts | Missed Pkts | BW Util | Last Rx            | Last Tx           | SINR Avg | SINR Stdv | NF Avg | NF Stdv | Rx Rate Avg | Tx Rate Avg |
+| 6     | 199     | 0       | 1           | 12537   | 1791922557.8060002 | 0.0               | 30.0     | 0.0       | -110.0 | 0.0     | 11000000    | 0.0         |
+| 7     | 197     | 0       | 3           | 12411   | 1791922557.808     | 0.0               | 30.0     | 0.0       | -110.0 | 0.0     | 11000000    | 0.0         |
+| 8     | 196     | 0       | 4           | 12348   | 1791922557.804     | 0.0               | 30.0     | 0.0       | -110.0 | 0.0     | 11000000    | 0.0         |
+| 10    | 198     | 0       | 2           | 12474   | 1791922557.812     | 0.0               | 30.0     | 0.0       | -110.0 | 0.0     | 11000000    | 0.0         |
+| 12    | 197     | 0       | 3           | 12411   | 1791922557.81      | 0.0               | 30.0     | 0.0       | -110.0 | 0.0     | 11000000    | 0.0         |
+| 14    | 195     | 0       | 5           | 12285   | 1791922557.8       | 0.0               | 30.0     | 0.0       | -110.0 | 0.0     | 11000000    | 0.0         |
+| 15    | 197     | 0       | 3           | 12411   | 1791922557.8019998 | 0.0               | 30.0     | 0.0       | -110.0 | 0.0     | 11000000    | 0.0         |
+| 16    | 195     | 0       | 5           | 12285   | 1791922557.798     | 0.0               | 30.0     | 0.0       | -110.0 | 0.0     | 11000000    | 0.0         |
+| 65535 | 0       | 200     | 0           | 0       | 0.0                | 1791922557.814122 | 0.0      | 0.0       | 0.0    | 0.0     | 0.0         | 11000000    |
+
+nem 11  mac NeighborStatusTable
+| NEM   | Rx Pkts | Tx Pkts | Missed Pkts | BW Util Ratio | SINR Avg | NF Avg | Rx Age      |
+| 6     | 0       | 0       | 0           | 0.0           | 0.0      | 0.0    | 5.145784907 |
+| 7     | 0       | 0       | 0           | 0.0           | 0.0      | 0.0    | 5.143784907 |
+| 8     | 0       | 0       | 0           | 0.0           | 0.0      | 0.0    | 5.147784907 |
+| 10    | 0       | 0       | 0           | 0.0           | 0.0      | 0.0    | 5.139784907 |
+| 12    | 0       | 0       | 0           | 0.0           | 0.0      | 0.0    | 5.141784907 |
+| 14    | 0       | 0       | 0           | 0.0           | 0.0      | 0.0    | 5.151784907 |
+| 15    | 0       | 0       | 0           | 0.0           | 0.0      | 0.0    | 5.149784907 |
+| 16    | 0       | 0       | 0           | 0.0           | 0.0      | 0.0    | 5.153784907 |
+| 65535 | 0       | 0       | 0           | 0.0           | 0.0      | 0.0    | 0.0         |
+
+nem 11  mac PacketComponentAggregationHistogram
+| Components | Count |
+| 1          | 200   |
+
+nem 11  mac QueueFragmentHistogram
+| Queue | 1   | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | >9 |
+| 0     | 200 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0  |
+| 1     | 0   | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0  |
+| 2     | 0   | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0  |
+| 3     | 0   | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0  |
+| 4     | 0   | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0  |
+
+nem 11  mac QueueStatusTable
+| Queue | Enqueued | Dequeued | Overflow | Too Big | 0   | 1 | 2 | 3 | 4 |
+| 0     | 200      | 200      | 0        | 0       | 200 | 0 | 0 | 0 | 0 |
+| 1     | 0        | 0        | 0        | 0       | 0   | 0 | 0 | 0 | 0 |
+| 2     | 0        | 0        | 0        | 0       | 0   | 0 | 0 | 0 | 0 |
+| 3     | 0        | 0        | 0        | 0       | 0   | 0 | 0 | 0 | 0 |
+| 4     | 0        | 0        | 0        | 0       | 0   | 0 | 0 | 0 | 0 |
+
+nem 11  mac RxSlotStatusTable
+| Index | Frame | Slot | Valid | Missed | Idle | Tx | Long | Freq | Lock | .25 | .50 | .75 | 1.0 | 1.25 | 1.50 | 1.75 | >1.75 |
+| 0     | 0     | 0    | 195   | 0      | 0    | 0  | 0    | 0    | 0    | 0   | 19  | 131 | 45  | 0    | 0    | 0    | 0     |
+| 1     | 0     | 1    | 195   | 5      | 0    | 0  | 0    | 0    | 0    | 0   | 110 | 82  | 3   | 4    | 0    | 1    | 0     |
+| 2     | 0     | 2    | 197   | 5      | 0    | 0  | 0    | 0    | 0    | 1   | 126 | 69  | 1   | 4    | 1    | 0    | 0     |
+| 3     | 0     | 3    | 196   | 2      | 0    | 0  | 0    | 0    | 0    | 0   | 115 | 79  | 2   | 0    | 2    | 0    | 0     |
+| 4     | 0     | 4    | 199   | 3      | 0    | 0  | 0    | 0    | 0    | 1   | 180 | 16  | 2   | 2    | 1    | 0    | 0     |
+| 5     | 0     | 5    | 197   | 3      | 0    | 0  | 0    | 0    | 0    | 1   | 183 | 12  | 1   | 1    | 0    | 0    | 2     |
+| 6     | 0     | 6    | 197   | 2      | 0    | 0  | 0    | 0    | 0    | 1   | 126 | 68  | 2   | 0    | 0    | 2    | 0     |
+| 7     | 0     | 7    | 198   | 4      | 0    | 0  | 0    | 0    | 0    | 0   | 174 | 19  | 5   | 2    | 0    | 1    | 1     |
+| 8     | 0     | 8    | 0     | 2      | 0    | 0  | 0    | 0    | 0    | 0   | 0   | 0   | 0   | 1    | 0    | 0    | 1     |
+
+nem 11  mac TxSlotStatusTable
+| Index | Frame | Slot | Valid | Missed | Big | .25  | .50 | .75 | 1.0 | 1.25 | 1.50 | 1.75 | >1.75 |
+| 8     | 0     | 8    | 1637  | 9      | 0   | 1622 | 9   | 0   | 6   | 0    | 0    | 1    | 8     |
+
+nem 11  mac UnicastByteAcceptTable0
+| NEM | Num Bytes Tx | Num Bytes Rx |
+
+nem 11  mac UnicastByteAcceptTable1
+| NEM | Num Bytes Tx | Num Bytes Rx |
+
+nem 11  mac UnicastByteAcceptTable2
+| NEM | Num Bytes Tx | Num Bytes Rx |
+
+nem 11  mac UnicastByteAcceptTable3
+| NEM | Num Bytes Tx | Num Bytes Rx |
+
+nem 11  mac UnicastByteAcceptTable4
+| NEM | Num Bytes Tx | Num Bytes Rx |
+
+nem 11  mac UnicastByteDropTable0
+| NEM | SINR | Reg Id | Dst MAC | Queue Overflow | Bad Control | Bad Spectrum Query | Flow Control | Big | Long | Freq | Slot Error | Miss Fragment |
+
+nem 11  mac UnicastByteDropTable1
+| NEM | SINR | Reg Id | Dst MAC | Queue Overflow | Bad Control | Bad Spectrum Query | Flow Control | Big | Long | Freq | Slot Error | Miss Fragment |
+
+nem 11  mac UnicastByteDropTable2
+| NEM | SINR | Reg Id | Dst MAC | Queue Overflow | Bad Control | Bad Spectrum Query | Flow Control | Big | Long | Freq | Slot Error | Miss Fragment |
+
+nem 11  mac UnicastByteDropTable3
+| NEM | SINR | Reg Id | Dst MAC | Queue Overflow | Bad Control | Bad Spectrum Query | Flow Control | Big | Long | Freq | Slot Error | Miss Fragment |
+
+nem 11  mac UnicastByteDropTable4
+| NEM | SINR | Reg Id | Dst MAC | Queue Overflow | Bad Control | Bad Spectrum Query | Flow Control | Big | Long | Freq | Slot Error | Miss Fragment |
+
+nem 11  mac scheduler.ScheduleInfoTable
+| Index | Frame | Slot | Type | Frequency  | Data Rate | Power | Class | Destination |
+| 0     | 0     | 0    | RX   | 2400000000 |           |       |       |             |
+| 1     | 0     | 1    | RX   | 2400000000 |           |       |       |             |
+| 2     | 0     | 2    | RX   | 2400000000 |           |       |       |             |
+| 3     | 0     | 3    | RX   | 2400000000 |           |       |       |             |
+| 4     | 0     | 4    | RX   | 2400000000 |           |       |       |             |
+| 5     | 0     | 5    | RX   | 2400000000 |           |       |       |             |
+| 6     | 0     | 6    | RX   | 2400000000 |           |       |       |             |
+| 7     | 0     | 7    | RX   | 2400000000 |           |       |       |             |
+| 8     | 0     | 8    | TX   | 2400000000 | 11000000  | 0.0   | 0     | 0           |
+
+nem 11  mac scheduler.StructureInfoTable
+| Name         | Value   |
+| bandwidth    | 1000000 |
+| frames       | 1       |
+| slotduration | 2000    |
+| slotoverhead | 0       |
+| slots        | 9       |
+

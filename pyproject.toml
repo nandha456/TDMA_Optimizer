@@ -20,6 +20,7 @@ dev = [
 
 [project.scripts]
 tdma-optimizer = "tdma_optimizer.cli:main"
+tdma-emane-scenario = "tdma_optimizer.emane_scenario:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -1,0 +1,22 @@
+nem 6   phy BroadcastPacketAcceptTable0
+| NEM | Num Pkts Tx | Num Bytes Tx | Num Pkts Rx | Num Bytes Rx |
+| 1   | 0           | 0            | 200         | 24072        |
+| 2   | 0           | 0            | 200         | 24072        |
+| 3   | 0           | 0            | 200         | 24072        |
+| 5   | 0           | 0            | 200         | 24072        |
+| 6   | 200         | 24072        | 0           | 0            |
+| 7   | 0           | 0            | 200         | 24072        |
+| 9   | 0           | 0            | 200         | 24072        |
+| 10  | 0           | 0            | 200         | 24072        |
+| 11  | 0           | 0            | 200         | 24072        |
+
+nem 6   phy BroadcastPacketDropTable0
+| NEM | Out-of-Band | Rx Sensitivity | Propagation Model | Gain Location | Gain Horizon | Gain Profile | Not FOI | Spectrum Clamp | Fade Location | Fade Algorithm | Fade Select | Antenna Freq | Gain Antenna | Missing Control |
+| 4   | 0           | 0              | 200               | 0             | 0            | 0            | 0       | 0              | 0             | 0              | 0           | 0            | 0            | 0               |
+| 8   | 0           | 0              | 200               | 0             | 0            | 0            | 0       | 0              | 0             | 0              | 0           | 0            | 0            | 0               |
+| 12  | 0           | 0              | 200               | 0             | 0            | 0            | 0       | 0              | 0             | 0              | 0           | 0            | 0            | 0               |
+| 13  | 0           | 0              | 200               | 0             | 0            | 0            | 0       | 0              | 0             | 0              | 0           | 0            | 0            | 0               |
+| 14  | 0           | 0              | 200               | 0             | 0            | 0            | 0       | 0              | 0             | 0              | 0           | 0            | 0            | 0               |
+| 15  | 0           | 0              | 200               | 0             | 0            | 0            | 0       | 0              | 0             | 0              | 0           | 0            | 0            | 0               |
+| 16  | 0           | 0              | 200               | 0             | 0            | 0            | 0       | 0              | 0             | 0              | 0           | 0            | 0            | 0               |
+
